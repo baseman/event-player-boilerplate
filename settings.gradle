@@ -1,0 +1,6 @@
+rootProject.name = 'myeventplayer'
+
+//include ':eventPlayer'
+include ':myeventplayer-common'
+//include ':myeventplayer-jvm'
+//include ':myeventplayer-js'

@@ -1,0 +1,3 @@
+[submodule "eventplayer"]
+	path = eventplayer
+	url = git@github.com:baseman/eventplayer.git
