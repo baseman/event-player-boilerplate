@@ -17,7 +17,7 @@ class MyChangeTest : Spek({
         val aggregateIdVal = 1
         val aggregateId = AggregateId<MyAggregate>(aggregateIdVal)
 
-        var actual = MyAggregate(
+        val actual = MyAggregate(
                 AggregateLegend(aggregateId, 1),
                 "blah"
         )
@@ -41,12 +41,13 @@ class MyChangeTest : Spek({
 
         fun assertModel(actual: MyAggregate, expected: MyAggregate) {
             actual.myVal shouldEqual expected.myVal
+            actual.legend.latestVersion shouldEqual expected.legend.latestVersion
         }
 
         it("should apply Changed event to the MyAggregate") {
-            val evt = MyChangedEvent(EventLegend(evtId, aggregateId, 1), "blah changed")
+            val evt = MyChangedEvent(EventLegend(evtId, aggregateId, 2), "blah changed")
 
-            var actualMutableAggregate = MutableAggregate(actual)
+            val actualMutableAggregate = MutableAggregate(actual)
             evt.applyTo(actualMutableAggregate)
 
             AssertUtil.assertAggregateEvent(actualMutableAggregate.model.legend, evt)
