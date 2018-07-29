@@ -1,5 +1,5 @@
-//group 'my.artifact.myeventplayer.jvm'
-//version '1.0-SNAPSHOT'
+group 'my.artifact.myeventplayer'
+version '1.0-SNAPSHOT'
 
 apply plugin: 'kotlin-platform-jvm'
 apply plugin: 'org.junit.platform.gradle.plugin'
@@ -45,13 +45,13 @@ dependencies {
     expectedBy project(':common')
 }
 
-//jar {
-//    manifest {
-//        attributes 'Main-Class': 'com.stockx.jugular.jvm.confluent.JugularConsumerKt'
-//    }
-//
-//    // This line of code recursively collects and copies all of a project's files
-//    // and adds them to the JAR itself. One can extend this task, to skip certain
-//    // files or particular types at will
-//    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
-//}
+jar {
+    manifest {
+        attributes 'Main-Class': 'com.stockx.jugular.jvm.confluent.JugularConsumerKt'
+    }
+
+    // This line of code recursively collects and copies all of a project's files
+    // and adds them to the JAR itself. One can extend this task, to skip certain
+    // files or particular types at will
+    from { configurations.compile.collect { it.isDirectory() ? it : zipTree(it) } }
+}
