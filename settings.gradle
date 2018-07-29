@@ -1,6 +1,6 @@
 rootProject.name = 'myeventplayer'
 
 include ':eventplayer'
-include ':myeventplayer-common'
-include ':myeventplayer-jvm'
+include ':common'
+include ':jvm'
 //include ':js'
