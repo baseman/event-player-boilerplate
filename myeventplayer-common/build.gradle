@@ -1,4 +1,4 @@
-group 'co.remotectrl'
+group 'my.artifact.myeventplayer'
 version '1.0-SNAPSHOT'
 
 buildscript {
@@ -20,6 +20,7 @@ repositories {
 
 dependencies {
     compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
+    compile "org.jetbrains.kotlin:kotlin-reflect:$kotlin_version"
 
-    expectedBy project(":eventPlayer")
+    compile project(':eventplayer')
 }

@@ -1,5 +1,7 @@
+package my.artifact.myeventplayer.common.event
+
 import co.remotectrl.eventplayer.*
-import my.artifact.eventplayer.aggregate.MyAggregate
+import my.artifact.myeventplayer.common.aggregate.MyAggregate
 
 data class MyChangedEvent(
         override val legend: EventLegend<MyAggregate>,
