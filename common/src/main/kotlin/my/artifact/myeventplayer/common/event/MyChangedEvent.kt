@@ -6,7 +6,7 @@ import my.artifact.myeventplayer.common.aggregate.MyAggregate
 data class MyChangedEvent(
         override val legend: EventLegend<MyAggregate>,
         val myChangeVal: String
-) : PlayEvent<MyAggregate>() {
+) : PlayEvent<MyAggregate> {
 
     constructor() : this(EventLegend(0, 0, 0), "")
 

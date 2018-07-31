@@ -22,7 +22,7 @@ class MyChangeTest : Spek({
                 "blah"
         )
 
-        it("should try to validate Change command input") {
+        it("should try to validate Change my.artifact.myeventplayer.common.aggregate.command input") {
             { MyChangeCommand("").executeOn(actual) } shouldThrow AnyException
         }
 
@@ -31,7 +31,7 @@ class MyChangeTest : Spek({
 
         val eventLegend = EventLegend(evtId, aggregateId, 2)
 
-        it("should produce Changed event on successful Commit command") {
+        it("should produce Changed my.artifact.myeventplayer.common.aggregate.event on successful Commit my.artifact.myeventplayer.common.aggregate.command") {
 
             AssertUtil.assertEvent(
                     MyChangeCommand("change blah").executeOn(actual).legend,
@@ -44,7 +44,7 @@ class MyChangeTest : Spek({
             actual.legend.latestVersion shouldEqual expected.legend.latestVersion
         }
 
-        it("should apply Changed event to the MyAggregate") {
+        it("should apply Changed my.artifact.myeventplayer.common.aggregate.event to the MyAggregate") {
             val evt = MyChangedEvent(EventLegend(evtId, aggregateId, 2), "blah changed")
 
             val actualMutableAggregate = MutableAggregate(actual)
