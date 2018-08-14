@@ -18,7 +18,7 @@ repositories {
 }
 
 dependencies {
-    expectedBy project(':eventplayer')
+    expectedBy project(':event-player')
     expectedBy project(':common')
     compile "org.jetbrains.kotlin:kotlin-stdlib-js:$kotlin_version"
 }

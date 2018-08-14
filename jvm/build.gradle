@@ -41,7 +41,7 @@ dependencies {
     testRuntime 'org.jetbrains.spek:spek-junit-platform-engine:1.1.5'
     testCompile "org.amshove.kluent:kluent:1.24"
 
-    expectedBy project(':eventplayer')
+    expectedBy project(':event-player')
     expectedBy project(':common')
 }
 

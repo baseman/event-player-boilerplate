@@ -19,6 +19,6 @@ repositories {
 }
 
 dependencies {
-    compile project(':eventplayer')
+    compile project(':event-player')
     compile "org.jetbrains.kotlin:kotlin-stdlib-common:$kotlin_version"
 }
