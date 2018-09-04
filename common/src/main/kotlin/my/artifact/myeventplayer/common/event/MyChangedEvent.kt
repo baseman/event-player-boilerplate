@@ -8,12 +8,12 @@ data class MyChangedEvent(
         val myChangeVal: String
 ) : PlayEvent<MyAggregate> {
 
-    constructor() : this(EventLegend(0, 0, 0), "")
-
-    override fun applyChangesTo(latestVersion: Int): MyAggregate {
+    override fun applyChangesTo(model: MyAggregate, latestVersion: Int): MyAggregate {
         return MyAggregate(
                 AggregateLegend(legend.aggregateId, latestVersion),
                 myVal = myChangeVal)
     }
+
+    constructor() : this(EventLegend(0, 0, 0), "")
 
 }

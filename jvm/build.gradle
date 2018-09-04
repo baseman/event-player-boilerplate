@@ -22,7 +22,6 @@ repositories {
     mavenCentral()
     maven { url "http://dl.bintray.com/jetbrains/spek" }
     maven { url "http://repo.spring.io/plugins-release/" }
-    maven { url "http://packages.confluent.io/maven/" }
 
 }
 
